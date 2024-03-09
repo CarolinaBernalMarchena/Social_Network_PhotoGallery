@@ -1,0 +1,23 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+### Aux. queries
+### Associated requirements: RF-A-18
+### The first 5 photos uploaded during the last 7 days with higher score
+
+GET {{BASE}}/trendingPictures/ratings
+
+### The first 5 photos uploaded during the last 7 days with more comments
+
+GET {{BASE}}/trendingPictures/comments
+
+### The first 5 categories with more photos associated
+
+GET {{BASE}}/trendingPictures/categories
+
+### The first 5 users with more followers
+
+GET {{BASE}}/trendingPictures/userfollowers
+
+### The first 5 users with highest rating in your photos
+
+GET {{BASE}}/trendingPictures/users

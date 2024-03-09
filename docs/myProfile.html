@@ -1,0 +1,157 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <title>carbermar3</title>
+    <script type="module" src="js\myProfile.js"></script>
+
+    <script>
+        function UpNewPhoto() {
+            location.href = "/newPhoto.html";
+        }
+
+        function irFoto(id) {
+            console.log(id);
+            location.href = "/myPhoto.html?id=" + id;
+        }
+
+    </script>
+
+    <!--<script>
+            include("header.html", "#page-header");
+            include("footer.html", "#page-footer");
+        </script>-->
+</head>
+
+<body>
+    <div style="text-align: right; background-color: #C3D4EE;">
+        <div style="padding: 1em;">
+        <div id='showUsername'></div>
+        <div id='header-logout'><button class=" btn btn-info " id='logout-button'>LOGOUT</button>
+        </div>
+        <div id='header-login'> <button class=" btn btn-info " id='logout-button'
+                onclick="location.href='/index.html';">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <div id="errors"> </div>
+    <div id='cont'></div>
+    <!--<div style="background-color: #BDD4F2 ;">
+        <div class=" container ">
+            <div class="row">
+                <div class=" col-3 offset-2 " style="text-align: right; padding-top: 0.5em;">
+                    <img class="img-fluid;
+        border-style: outset;" height="75" width="75" src="images/MyProfile.PNG">
+                </div>
+                <div class=" col-7 ">
+                    <div style="padding-top: 1em; font-size: 150%;"><b>Carbermar3</b></div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding-top: 0.5em;" class=" container ">
+            <div class="row">
+                <div class=" col-3 offset-2 " style="text-align: right; color: #969FAA">Name:</div>
+                <div class=" col-7" style="padding-left: 0em; color: #969FAA">
+                    <div>Carolina</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class=" container ">
+            <div class="row">
+                <div class=" col-3 offset-2 " style="text-align: right; color: #969FAA">Surname:</div>
+                <div class=" col-7" style="padding-left: 0em; color: #969FAA">
+                    <div>Bernal</div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" container ">
+            <div class="row">
+                <div class=" col-3 offset-2 " style="text-align: right; color: #969FAA">Email:</div>
+                <div class=" col-7" style="padding-left: 0em; padding-bottom: 1em; color: #969FAA">
+                    <div>carolinabm2000@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>-->
+
+    <div style="padding-top: 5em; padding-left: 1em;"></div>
+    Public Pictures
+    </div>
+
+    <hr>
+
+
+    <div id='cont2'></div>
+
+    <!--<div>
+        <div class=" container ">
+            <div class="row">
+                <div class=" col-4"><button onclick="location.href='/newPhoto.html';"  type= " button " style='width:100%;height:100%'class= " btn btn-light "> ➕ Add a photo </button >
+                </div>
+                <div class=" col-4">
+                    <img onclick="location.href='/myPhoto.html';" class="img-fluid;
+                    border-style: outset;" style="width: 100%;height: auto;
+                    
+                  
+                   "  src="images/flowers.jpg"></div>
+
+                <div class=" col-4">
+                    <img class="img-fluid;
+                    border-style: outset;" style="width: 100%;height: auto;
+                    
+                   
+                   "  src="images/cake.jpg"></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class=" container" style="margin-top: 1em;">
+            <div class="row">
+                <div class=" col-4"><img class="img-fluid;
+                    border-style: outset;"  style="width: 100%;height: auto;"  src="images/cow.jpg"></div>
+                <div class=" col-4">
+                    <img class="img-fluid;
+                    border-style: outset;" style="width: 100%;height: auto;"  src="images/goose.jpg"></div>
+
+                <div class=" col-4">
+                    <img class="img-fluid;
+                    border-style: outset;" style="width: 100%;height: auto;"  src="images/farm.jpg"></div>
+            </div>
+        </div>
+    </div>-->
+
+    <div style="padding-top: 1em; padding-left: 1em; padding-bottom: 1em;">
+        <input type="button" class= " btn btn-light " value="<Back" onClick="history.go(-1);">
+    </div>
+
+    <div id="page-footer"></div>
+
+    <script type="module" src="js/header.js"></script>
+
+
+
+    <!--<script type="module" src="js/header.js"></script>
+        <script type="module" src="js/index.js"></script>-->
+
+</body>

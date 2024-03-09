@@ -1,0 +1,53 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <title>SingUp</title>
+    <script src="js/createAccount.js" type="module"> </script>
+</head>
+
+<body style="background-color:#BDD4F2;">
+    <div id="errors"> </div>
+        <div style="text-align:center;padding-top: 2em;"><img height="200" width="200" src="images/Logo 500x500 px.png"></div>
+
+        <form id="form">
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="text" class= " form-control " id="name" name="name" size="40"; placeholder= "First Name"></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="text" class= " form-control " id="surname" name="surname" size="40"; placeholder= "Surname"></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="number" class= " form-control " id="phoneNumber" name="phoneNumber" size="40"; placeholder= "PhoneNumber"></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="email" class= " form-control " id="email" name="email" size="40"; placeholder= "Email"></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="text" class= " form-control " id="username" name="username" size="40"; placeholder= "Username"></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="password" class= " form-control " id="PASSWORD" name="PASSWORD" size="40"; placeholder= "Password"></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="url" class= " form-control " id="profilePictureUrl" name="profilePictureUrl" size="40"; placeholder= "Upload your profile picture (URL)"></div>
+       
+
+        <div style="margin-top: 3em;text-align: center;">
+
+            <button type="submit" style="border-radius: 15px; background-color:#47525E; border-color: #7095C6; color:white;width: 50%" type= " button " class= " btn btn-secondary "> Create your account </button >
+               <div onclick="location.href='/login.html';"style="margin-top:0.5em;font-size: smaller;font-weight: bold;"> <a style=color:grey; href="#">Already have an account? Sign In</a></div>
+        </div>
+    </form>
+
+        <div id="page-footer"></div>
+    
+        <script>
+           // include("header.html", "#page-header");
+            include("footer.html", "#page-footer");
+        </script>
+    
+        <!--<script type="module" src="js/header.js"></script>
+        <script type="module" src="js/index.js"></script>-->
+</body>

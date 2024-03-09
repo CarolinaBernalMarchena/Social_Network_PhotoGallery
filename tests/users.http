@@ -1,0 +1,48 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+### Aux. queries
+### Get all pictures
+# @name users
+GET {{BASE}}/users
+
+### Register a new user successfully
+### Associated requirements: RF-C03
+POST {{BASE}}/register
+Content-Type: application/json
+
+{
+    "name": "Roger",
+    "surname": "Smith",
+    "phoneNumber": "664532170",
+    "email": "rogers@gmail.com",
+    "userName": "esRoger",
+    "PASSWORD": "roger2password",
+    "profilePictureUrl": "https://unsplash.com/photos/ZtXzYqRGRhw"
+}
+
+### User authentication
+### Associated requirements: RF-C04
+GET {{BASE}}/login/pbkdf2:sha256:150000$r03hUuPV$923a8dd8e2d117bfe1b9c5076666fe88cb2c92392afa8cb80137456ded3ba1a1/rogers@gmail.com
+
+### See users profiles and their public pictures
+### Associated requirements: RF-C09
+@userId = {{users.response.body.0.userId}}
+GET {{BASE}}/users/{{userId}}
+
+### See all public pictures from a user
+GET {{BASE}}/pictures/{{userId}}
+
+### Follow a user
+### Associated requirements: RF-A15
+POST {{BASE}}/userFollowers
+Content-Type: application/json
+
+{
+    "followerId": 1,
+    "accountOwnerId": 2
+}
+
+### Unfollow a user you previously followed
+### Associated requirements: RF-A16
+DELETE {{BASE}}/userFollowers/4/1/2
+

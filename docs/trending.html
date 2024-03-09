@@ -1,0 +1,70 @@
+<!doctype HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="images/favicon.ico">
+    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/axios.min.js"></script>
+        <script src="js/utils/include.js"></script>
+    
+        <title>carbermar3</title>
+    </head>
+
+<body>
+    <div style="text-align: right; background-color: #C3D4EE;">
+        <div style="padding: 1em;">
+        <div id='showUsername'></div>
+        <div id='header-logout'><button class=" btn btn-info " id='logout-button'>LOGOUT</button>
+        </div>
+        <div id='header-login'> <button class=" btn btn-info " id='logout-button'
+                onclick="location.href='/index.html';">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <div id="errors"> </div>
+   <div style="background-color: #BDD4F2 ;">
+    <div style="text-align:center;padding-top: 2em;"><img height="200" width="200"
+        src="images/Logo 500x500 px.png"></div>
+    <div style="font-size:x-large; text-align: center;">TRENDING SECTION</div>
+    <div style="font-size:large; text-align: center; padding-top: 1em; padding-bottom: 3em;">Trending photos and users of the week</div>
+
+    </div>
+
+    <div>
+        <div style="padding-top: 1em; text-align: center;">
+        <ul class= " list-group ">
+            <li onclick="location.href='/highestRatedPhotos.html';" class= " list-group-item "> Highest Rated Photos </li >
+            <li onclick="location.href='/photosMoreComments.html';" class= " list-group-item "> Photos With More Comments </li >
+            <li onclick="location.href='/categoriesMorePhotos.html';" class= " list-group-item "> Categories Whith More Photos </li >
+            <li onclick="location.href='/usersMoreFollowers.html';" class= " list-group-item "> Users With More Followers </li >
+            <li onclick="location.href='/topRatedUsers.html';" class= " list-group-item "> Top Rated Users </li >
+        </ul >
+        </div>
+    </div>
+
+    <div style="padding-top: 1em; padding-left: 1em;">
+        <input type="button" class= " btn btn-light " value="<Back" onClick="history.go(-1);">
+    </div>
+
+    <div id="page-footer"></div>
+    
+        <script>
+           // include("header.html", "#page-header");
+            include("footer.html", "#page-footer");
+        </script>
+
+<script type="module" src="js/header.js"></script>
+    
+        <!--<script type="module" src="js/header.js"></script>
+        <script type="module" src="js/index.js"></script>-->
+
+</body>

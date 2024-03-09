@@ -1,0 +1,177 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <title>carbermar3</title>
+    <script type="module" src="js\myPhoto.js"></script>
+    <script>
+        function irPerfil(idPerfil) {
+            location.href = "/userProfile.html?id=" + idPerfil;
+        }
+        function editPhoto(idPhoto) {
+            location.href = "/editPhoto.html?id=" + idPhoto;
+        }
+        function goToCategory(name) {
+            console.log(name);
+            location.href = "/categories.html?categorieName=" + name;
+        }
+    </script>
+</head>
+
+<body>
+    <div style="text-align: right; background-color: #C3D4EE;">
+        <div style="padding: 1em;">
+        <div id='showUsername'></div>
+        <div id='header-logout'><button class=" btn btn-info " id='logout-button'>LOGOUT</button>
+        </div>
+        <div id='header-login'> <button class=" btn btn-info " id='logout-button'
+                onclick="location.href='/index.html';">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <div id='showUsername'></div>
+    <div id='header-login'></div>
+    <div id="errors"> </div>
+    <div id='cont' style="margin-bottom: 2em;"></div>
+    <div id='cont3' style="margin-bottom: 2em;"></div>
+    <div id='cont2' style="margin-bottom: 2em;"></div>
+
+    <!--<div style="margin-top: 1em;">
+        <div class=" container ">
+            <div class="row">
+                <div class=" col-3 offset-2 " style="text-align: right;">
+                    <img class="img-fluid;
+        border-style: outset;" height="75" width="75" src="images/MyProfile.PNG">
+                </div>
+                <div class=" col-7 ">
+                    <div style="padding-top: 1em; font-size: 150%;"><b>Carbermar3</b></div>
+                </div>
+            </div>
+        </div>
+
+    <div>
+
+        <div style= "text-align: right; padding-right: 1em; "><button onclick="location.href='/editPhoto.html';"  class= "btn btn-primary " style="background: grey;"> ✏️ </button ></div>
+        <div  style= "padding-top: 0.5em;padding-right: 1em; text-align: right;"><button class= "btn btn-danger " style="background: grey;"> 🗑️ </button ></div>
+
+        <div style="text-align:right;padding-top: 1em;padding-right: 42%; font-size: 75%;">Photo rating: 4.2✰</div>
+
+        <div style="text-align:center;"><img class="img-fluid" height="305" width="305" src="images/flowers.jpg"></div>
+
+        <div style="text-align:right;padding-right: 42%; font-size: 75%"><i>February 3, 2021</i></div>
+
+        <div style="text-align:center;font-size: 130%">Lovely flowers field</div>
+
+        <div style="padding-top: 1em; text-align:center;">The other day I saw this flowers field and I couldn't resist to take a picture</div>
+    </div>
+
+    <div style="margin-top: 4em;">
+        <div class=" container ">
+            <div class="row">
+                <div class=" col-3 " style="text-align: right;">
+                    <img class="img-fluid;
+        border-style: outset;" height="45" width="45" src="images/profile1.png">
+                </div>
+                <div class=" col-9 ">
+                    <div>Looks like something out of a fairy tale</div>
+                        <div style="text-align:left;font-size: 75%"><i>February 3, 2021</i></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 1em;">
+            <div class=" container ">
+                <div class="row">
+                    <div class=" col-3 " style="text-align: right;">
+                        <img class="img-fluid;
+            border-style: outset;" height="45" width="45" src="images/profile2.png">
+                    </div>
+                    <div class=" col-9 ">
+                        <div>What a nice picture! Love it</div>
+                            <div style="text-align:left;font-size: 75%"><i>February 3, 2021</i></div>
+    
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 1em;">
+                <div class=" container ">
+                    <div class="row">
+                        <div class=" col-3 " style="text-align: right;">
+                            <img class="img-fluid;
+                border-style: outset;" height="45" width="45" src="images/profile4.png">
+                        </div>
+                        <div class=" col-9 ">
+                            <div>I love those flowers</div>
+                                <div style="text-align:left; margin-bottom: 4em;font-size: 75%"><i>February 3, 2021</i></div>
+        
+                        </div>
+                    </div>
+                </div>-->
+
+    <form id="comment-form">
+        <div>
+            <div style="text-align: center;scroll-padding-top: 2em;"><textarea id="commentText" name="commentText"
+                    rows="10" cols="40"></textarea></div>
+            <div style="text-align: center;"><button type="submit" id=" button-comment "
+                    class=" btn btn-success ">Comment
+                </button></div>
+        </div>
+    </form>
+
+    <div style="text-align: center">
+        <label for="rating-input "> Rate this photo: </label>
+    </div>
+
+    <form id="rating-form">
+        <div style="text-align: center;" class=" form-group ">
+            <select style="width: 50%;display: initial;" id=" rating-input " name="ratingValue" class=" form-control ">
+                <option value="1">✰</option>
+                <option value="2">✰✰</option>
+                <option value="3">✰✰✰</option>
+                <option value="4">✰✰✰✰</option>
+                <option value="5">✰✰✰✰✰</option>
+            </select>
+        </div>
+
+        <div style="text-align: center">
+            <button type=" submit " id=" button-rate " class=" btn btn-success "> Rate </button>
+        </div>
+    </form>
+
+    <div style="padding-top: 1em; padding-left: 1em; padding-bottom: 2em;">
+        <input type="button" class= " btn btn-light " value="<Back" onClick="history.go(-1);">
+    </div>
+
+    <div id="page-footer"></div>
+
+    <script>
+        // include("header.html", "#page-header");
+        include("footer.html", "#page-footer");
+
+    </script>
+    <script type="module" src="js/header.js"></script>
+
+    <!--<script type="module" src="js/header.js"></script>
+        <script type="module" src="js/index.js"></script>-->
+
+    <div id="page-footer"></div>
+
+    <script type="module" src="js/header.js"></script>
+
+</body>

@@ -1,0 +1,142 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <title>carbermar3</title>
+    <script src="js/libs/axios.min.js"> </script>
+    <script type="module" src="js\editPhoto.js"></script>
+</head>
+
+<body style="background-color: #BDD4F2;">
+    <div style="text-align: right; background-color: #C3D4EE;">
+        <div style="padding: 1em;">
+        <div id='showUsername'></div>
+        <div id='header-logout'><button class=" btn btn-info " id='logout-button'>LOGOUT</button>
+        </div>
+        <div id='header-login'> <button class=" btn btn-info " id='logout-button'
+                onclick="location.href='/index.html';">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <div id="errors"></div>
+    <div style="text-align:center;padding-top: 2em"><img height="200" width="200" src="images/Logo 500x500 px.png">
+    </div>
+
+    <div style="background-color: #F2F6FC;">
+
+        <div style="text-align: center;"><b>Edit Photo</b></div>
+
+        <form id="editPhotoform">
+            <div class=" container ">
+                <div id='cont'></div>
+                <!--<div class="row">
+                <div class=" col-3 offset-2 " style="text-align: right; padding-top: 0.5em;">
+                    <img class="img-fluid;
+            border-style: outset;" height="60" width="60" src="images/MyProfile.PNG">
+                </div>
+                <div class=" col-7 ">
+                    <div style="padding-top: 1em; font-size: 150%;">Carbermar3</div>
+                </div>
+            </div>
+
+            <form>
+
+
+                <div style="margin-top: 1em; text-align: center;"><input value="https://unsplash.com/photos/lf8QsueV8Ew"
+                        style="display:initial; width: 50%" type="text" class=" form-control " name="Url" size="40"
+                        placeholder="Photo URL..."></div>
+
+                <div style="margin-top: 1em; text-align: center;"><input value="Lovely flowers field" style="display:initial; width: 50%" type="text"
+                        class=" form-control " name="Title" size="40"  placeholder="Title..."></div>
+
+                <div style="margin-top: 1em; text-align: center;"><textarea style="display:initial; width: 50%"
+                        type="text" class=" form-control " name="Description" size="40"
+                        placeholder="Description...">The other day I saw this flowers field and I couldn't resist to take a picture</textarea></div>
+
+                <div><input type="date" id="start" name="trip-start" value="2021-03-28" min="2021-03-28"
+                        max="2031-03-28" style="margin-left: 25%; margin-top: 1.5%;"></div>
+
+                <div class=" container ">
+                    <div class="row">
+                        <div class=" col-6 col-md-4 offset-md-2 "
+                            style="text-align: right; color: #969FAA; padding-top: 0.5em; ">Chose visibility:</div>
+                        <div class=" col-6" style="padding-left: 0em;">
+                            <div style="padding-top: 0.5em;"><label class="switch"><input type="checkbox"><span
+                                        class="slider round"></span></label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown" style="text-align: center;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Add a category
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">ART</a>
+                        <a class="dropdown-item" href="#">NATURE</a>
+                        <a class="dropdown-item" href="#">FLOWERS</a>
+                    </div>
+                    <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%"
+                            type="text" class=" form-control " name="Url" size="40" ; placeholder="➕Create a new category">
+                    </div>
+
+                    <div style="text-align: center; padding-top: 2em; padding-bottom: 2em; max-width: 150%;"><span
+                            class="badge badge-secondary"
+                            style="font-size: larger;background-color: #77D353;">ART</span></div>-->
+
+                <div style="text-align: center; font-size: x-small; color: #969FAA; padding-top: 1cm;">use the ctrl
+                    button (or press and hold if you are on the phone) to select more than one category</div>
+                <div style="text-align: center;"><select class="form-select" id="selector" multiple
+                        aria-label="multiple select example">
+                    </select></div>
+
+                <div style="text-align: center; padding-top: 1em;width: 100%;">
+                    <button type=" submit " id="editPhoto-rate"
+                        style="border-radius: 40px; background-color: white; color: #77D353; border-color: white; width: 50%;"
+                        class=" btn btn-primary " id="edit">Edit photo</button>
+                </div>
+            </div>
+        </form>
+        <div style="padding-bottom: 1em; margin: 2em;">
+            <form id='categoryForm'>
+                <div style="margin-top: 1em; text-align: center;" class="input-group mb-3">
+                    <input type="text" class="form-control" name='categoryName' placeholder="➕Create a new category"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div style="padding-top: 1em; text-align: right; padding-right: 1em; padding-bottom: 2em;">
+            <input type="button" class= " btn btn-light " value="<Back" onClick="history.go(-1);">
+        </div>
+
+        <div id="page-footer"></div>
+
+        <script>
+            // include("header.html", "#page-header");
+            include("footer.html", "#page-footer");
+        </script>
+
+        <script type="module" src="js/header.js"></script>
+
+        <!--<script type="module" src="js/header.js"></script>
+            <script type="module" src="js/index.js"></script>-->
+
+</body>

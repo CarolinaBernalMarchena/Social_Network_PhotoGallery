@@ -1,0 +1,14 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+### Aux. queries
+### Comment on a picture
+### Associated requirements: RF-B14
+POST {{BASE}}/comments
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "pictureId": 2,
+    "commentText": "So cute",
+    "commentDate": "2021-03-16"
+}

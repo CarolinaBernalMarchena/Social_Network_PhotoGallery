@@ -1,0 +1,55 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+### Aux. queries
+### Get all pictures
+### Associated requirements: RF-C01
+# @name pictures
+GET {{BASE}}/pictures
+
+### Get all pictures by id
+### Associated requirements: RF-C02
+@pictureId = {{pictures.response.body.0.pictureId}}
+GET {{BASE}}/pictures/{{pictureId}}
+
+### Get all comments from a picture
+GET {{BASE}}/comments/{{pictureId}}
+
+### Add a new photo
+### Associated requirements: RF-C05
+@userId = {{pictures.response.body.2.userId}}
+POST {{BASE}}/pictures
+Content-Type: application/json
+
+{
+    "u":  {{userId}},
+    "url": "https://unsplash.com/photos/IQVFVH0ajag",
+    "uploadDate": "2020-04-04",
+    "title": "Grass field photo",
+    "description": "This shot makes me thirsty! I love how it turned out.",
+    "visibility": "PRIVATE"
+}
+
+### Alter a photo
+### Associated requirements: RF-C06
+PUT {{BASE}}/pictures/4
+Content-Type: application/json
+
+{
+    "userId": {{userId}},
+    "url": "https://unsplash.com/photos/IQVFVH0ajag",
+    "uploadDate": "2020-04-04",
+    "title": "Grass field photo",
+    "description": "This shot makes me thirsty! I love how it turned out.",
+    "visibility": "PUBLIC"
+}
+
+### Delete a photo
+### Associated requirements: RF-C08
+DELETE {{BASE}}/pictures/4
+
+### See photos from followed users
+### Associated requirements: RF-A17
+GET {{BASE}}/picturesByFollowerUser/1
+ 
+
+

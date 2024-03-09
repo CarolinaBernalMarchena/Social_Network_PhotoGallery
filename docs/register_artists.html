@@ -1,0 +1,55 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <title>carbermar3</title>
+    <script src="js/libs/axios.min.js"> </script>
+    <script src="js/register_artists.js" type="module"> </script>
+
+</head>
+
+<body style="background-color: #BDD4F2;">
+    <div style="text-align: right; background-color: #BDD4F2;"></div>
+    <div id="errors"></div>
+    <div style="text-align:center;padding-top: 2em"><img height="200" width="200" src="images/Logo 500x500 px.png">
+    </div>
+
+    <div style="background-color: #F2F6FC;">
+
+        <div style="text-align: center;"><b>New Artist</b></div>
+
+        <form id="uploadArtistform">
+            <div style="margin-top: 1em; text-align: center;"><input type="url" name="url" style="display:initial; width: 50%" type="text" 
+                    class=" form-control " size="40"placeholder="Photo URL..."></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="text"
+                    class=" form-control " name="name" size="40" ; placeholder="artist name..."></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="text"
+                    class=" form-control " name="genre" size="40" ; placeholder="artist genre..."></div>
+            <div style="margin-top: 1em; text-align: center;"><input style="display:initial; width: 50%" type="text"
+                    class=" form-control " name="bio" size="40" ; placeholder="short bio about the artist..."></div>
+            <div><input type="date" id="start" name="trip-start" value="2021-12-16" min="1900-12-16"
+                    max="2031-03-28" style="margin-left: 25%; margin-top: 1.5%;"></div>
+
+
+        
+        <div style="text-align: center; padding-top: 1em;width: 100%;">
+            <button type=" submit " id="uploadMobile"
+                style="border-radius: 40px; background-color: white; color: #77D353; border-color: white; width: 50%;"
+                class=" btn btn-primary " id="upload">Upload new artist</button>
+        </div>
+    </form>
+</body>

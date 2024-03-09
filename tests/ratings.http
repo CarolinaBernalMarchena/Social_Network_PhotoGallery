@@ -1,0 +1,14 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+### Aux. queries
+### Register a new user successfully
+### Associated requirements: RF-C07
+POST {{BASE}}/ratings
+Content-Type: application/json
+
+{
+    "userId": "1",
+    "pictureId": "2",
+    "ratingDate": "2021-03-27",
+    "ratingValue": "5"
+}

@@ -1,0 +1,33 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+### Aux. queries
+### Get all categories
+# @name categories
+GET {{BASE}}/categories
+
+### Add a category to a photo
+### Associated requirements: RF-B10
+POST {{BASE}}/picturecategories
+Content-Type: application/json
+
+{
+    "pictureId": 2,
+    "categoryId": 1
+}
+
+### Delete a category from a photo
+### Associated requirements: RF-B11
+DELETE {{BASE}}/picturecategories/2/1
+
+### Create a new category
+### Associated requirements: RF-B12
+POST {{BASE}}/categories
+Content-Type: application/json
+
+{
+    "categoryName": "ANIMALS"
+}
+
+### See all pictures from a category
+### Associated requirements: RF-B13
+GET {{BASE}}/categories/0/categoryAll

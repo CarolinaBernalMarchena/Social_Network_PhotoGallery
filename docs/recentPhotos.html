@@ -1,0 +1,150 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <title>carbermar3</title>
+    <script type="module" src="js\recentPhotos.js"></script>
+    <script>
+        function irPerfil(idPerfil) {
+            location.href = "/userProfile.html?id=" + idPerfil;
+        }
+        function irFoto(id,userId,pictureUserId) {
+            console.log(id);
+            if(userId==pictureUserId){
+                    location.href = "/myPhoto.html?id=" + id;
+                }else{
+                    location.href = "/photoInfo.html?id=" + id;
+
+                }
+        }
+
+        function goToTrending() {
+            location.href = "/trending.html";
+        }
+
+        function goToArtists() {
+            location.href = "/artists.html";
+        }
+
+        function NewArtists() {
+            location.href = "/register_artists.html";
+        }
+
+        function goToCategories() {
+            location.href = "/categories.html";
+        }
+
+        function goToFollowing(id) {
+            console.log(id);
+            location.href = "/followingUsersPhotos.html?id=" + id;
+        }
+
+        function goToMyProfile(id) {
+            console.log(id);
+            location.href = "/myProfile.html?id=" + id;
+        }
+    </script>
+    <!--   <script type="module" src="js/header.js"></script>-->
+
+</head>
+
+<body>
+    <div style="text-align: right; background-color: #C3D4EE;">
+        <div style="padding: 1em;">
+            <div id='showUsername'></div>
+            <div id='header-logout'><button class=" btn btn-info " id='logout-button'>LOGOUT</button>
+            </div>
+            <div id='header-login'> <button class=" btn btn-info "  id='logout-button'
+                    onclick="location.href='/index.html';">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <div id="errors"> </div>
+    <!--<div id="logout-button"></div>-->
+    <div class="imagenArriba">
+        <div style="text-align:center;padding-top: 2em;"><img height="200" width="200" src="images/Logo 500x500 px.png">
+        </div>
+    </div>
+
+    <div id='cont2'></div>
+    <!--<nav class="nav nav-pills nav-justified">
+        <a onclick="location.href='/Categories.html';" class="nav-item nav-link active letraResponsive" href="#"
+            style="border:solid #8190A5;
+        border-top-left-radius: 40px; color: #8190A5; border-bottom-left-radius: 40px; background-color: white;">Categories</a>
+        <a onclick="location.href='/Trending.html';" class="nav-item nav-link letraResponsive" href="#"
+            style="border:solid #8190A5; color: #8190A5;">Trending</a>
+        <a onclick="location.href='/followingUsersPhotos.html';" class="nav-item nav-link letraResponsive" href="#"
+            style="border:solid #8190A5; color: #8190A5">Following
+            Users</a>
+        <a onclick="location.href='/myProfile.html';" class="nav-item nav-link letraResponsive" href="#" style="border:solid #8190A5; color: #8190A5;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;">My profile</a>
+    </nav>-->
+
+    <div id='cont'></div>
+    <!--
+    <div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 150px;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/profile1.png" onclick="location.href='/userProfile.html';">BirdCrafts</div>
+        <div style="text-align:center;"><img onclick="location.href='/photoInfo.html';"  class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/budgie.jpg"></div>
+    </div>
+
+
+    <div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 150px;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/profile2.png">AlexKnight</div>
+        <div style="text-align:center;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/octopus.jpg"></div>
+    </div>
+
+    <div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 150px;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/profile3.png">WhithWendy</div>
+        <div style="text-align:center;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/cafe.jpg"></div>
+    </div>
+
+    <div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 150px;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/profile4.png">VanillaBeanie</div>
+        <div style="text-align:center;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/nature.jpg"></div>
+    </div>
+
+    <div>
+        <div style="text-align:center; padding-top:5em; padding-right: 150px;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/profile5.png">Farquaadhater</div>
+        <div style="text-align:center;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/shrek.jpg"></div>
+    </div>-->
+    <br><br>
+    <div id="page-footer"></div>
+
+    <script>
+        include("footer.html", "#page-footer");
+    </script>
+
+    <script type="module" src="js/header.js"></script>
+
+
+</body>

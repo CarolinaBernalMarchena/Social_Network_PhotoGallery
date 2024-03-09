@@ -1,0 +1,116 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <title>carbermar3</title>
+    <script src="js/libs/axios.min.js"> </script>
+    <script type="module" src="js\highRated.js"></script>
+    <script>
+        function irFoto(id,userId,pictureUserId) {
+            console.log(id);
+            if(userId==pictureUserId){
+                    location.href = "/myPhoto.html?id=" + id;
+                }else{
+                    location.href = "/photoInfo.html?id=" + id;
+
+                }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div style="text-align: right; background-color: #C3D4EE;">
+        <div style="padding: 1em;">
+        <div id='showUsername'></div>
+        <div id='header-logout'><button class=" btn btn-info " id='logout-button'>LOGOUT</button>
+        </div>
+        <div id='header-login'> <button class=" btn btn-info " id='logout-button'
+                onclick="location.href='/index.html';">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <div id="errors"> </div>
+
+    <div class="imagenArriba">
+        <div style="text-align:center;padding-top: 2em"><img height="200" width="200" src="images/Logo 500x500 px.png">
+        </div>
+    </div>
+
+    <div style="text-align: center; font-size: x-large">Highest Rated Photos</div>
+
+    <div style="padding-top: 1em; padding-left: 1em;">
+        <input type="button" class= " btn btn-light " value="<Back" onClick="history.go(-1);">
+    </div>
+
+    <div id='container' style="margin-bottom: 2em;">
+
+    </div>
+    <!--<div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 200px; font-size: x-large;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/cupicon.png">5✰</div>
+        <div style="text-align:center;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/trending1.jpg"></div>
+    </div>
+
+
+    <div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 200px; font-size: x-large;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/cupicon.png">4'95✰</div>
+        <div style="text-align:center;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/trending2.jpg"></div>
+    </div>
+
+    <div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 200px; font-size: x-large;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/cupicon.png">4'9✰</div>
+        <div style="text-align:center;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/trending3.jpg"></div>
+    </div>
+
+    <div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 200px; font-size: x-large;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/cupicon.png">4'89✰</div>
+        <div style="text-align:center;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/trending4.jpg"></div>
+    </div>
+
+    <div>
+        <div style="text-align:center;padding-top: 5em;padding-right: 200px; font-size: x-large;"><img class="img-fluid;
+            border-style: outset;" height="75" width="75" src="images/cupicon.png">4'85✰</div>
+        <div style="text-align:center; padding-bottom: 1em;"><img class="img-fluid" style="padding: 1em; padding-bottom: 8em;
+            border: solid;
+            border-style: outset;" height="305" width="305" src="images/trending5.jpg"></div>
+    </div>-->
+
+    <div id="page-footer"></div>
+
+    <script>
+        // include("header.html", "#page-header");
+        include("footer.html", "#page-footer");
+    </script>
+
+    <script type="module" src="js/header.js"></script>
+
+    <!--<script type="module" src="js/header.js"></script>
+        <script type="module" src="js/index.js"></script>-->
+
+</body>
