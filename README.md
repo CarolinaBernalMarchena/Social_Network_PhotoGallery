@@ -8,7 +8,7 @@ A social media/photo gallery platform built using JavaScript for the frontend an
 ## Design: 
 https://marvelapp.com/prototype/61082f9/screen/77094181
 
-##Some screenshots from the project:
+## Some screenshots from the project:
 
 ![image](https://github.com/CarolinaBernalMarchena/Social_Network_PhotoGallery/assets/62402017/ea076fde-926c-4499-a47b-1fba699c17da)  
 *main page where the photos of the platform are displayed*  
